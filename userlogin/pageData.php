@@ -1,6 +1,6 @@
 <?php
 
-$per_page=6;
+$per_page=18;
 
 include_once('includes/db.php');
 
@@ -83,7 +83,7 @@ var load=0;
 function last_msg_funtion() 
 { 
 //loadData("<?php echo $loadCount; ?>");
-load=load+6;
+load=load+18;
 loadData(load).delay(1000);
 }; 
 

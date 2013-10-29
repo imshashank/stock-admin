@@ -1,13 +1,12 @@
 <?php
 
-$per_page=6;
+$per_page=18;
 
 include_once('includes/db.php');
 
 if(isset($_POST['pageLimit']) && !empty($_POST['pageLimit'])){
 
     $pageLimit=$_POST['pageLimit'];
-//echo $pageLimit;
 
 }else{
 
@@ -84,7 +83,7 @@ var load=0;
 function last_msg_funtion() 
 { 
 //loadData("<?php echo $loadCount; ?>");
-load=load+6;
+load=load+12;
 loadData(load).delay(1000);
 }; 
 

@@ -114,7 +114,6 @@ font-size:10px;
 </style>
 
 <script type="text/javascript">
-var pageLimit=0;
 function loadData(pageLimit){
      $(".flash").show();
      $(".flash").fadeIn(400).html
@@ -132,7 +131,7 @@ function loadData(pageLimit){
       }
   });
 }
-  loadData('0').delay(1000);
+  loadData('0');
 
 $('#parent > div').live('click', function (e) {
 //	$("div").addClass("important");
@@ -340,15 +339,7 @@ Hey, $loggedInUser->displayname. This is an example secure page designed to demo
 			<div id="overview" style="height: 40px;"></div>
 		</div>
 	</div>
-	<div class="widget-body">
-	<div class="tab-pane active" id="website-traffic-tab2">
-	    <div id="wrapper2">
-       		<div id="pageData2"></div>
-	    </div>
-		<div class="clearfix" style="clear: both;"></div>
-		<div id="placeholder" style="height: 200px;"></div>
-		<div id="overview" style="height: 40px;"></div>
-	</div>
+
 	</div>
 </div>
 

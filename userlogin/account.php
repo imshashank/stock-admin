@@ -335,19 +335,10 @@ Hey, $loggedInUser->displayname. This is an example secure page designed to demo
 		    </div>
 
 			<div class="clearfix" style="clear: both;"></div>
-			<div id="placeholder" style="height: 200px;"></div>
 			<div id="overview" style="height: 40px;"></div>
 		</div>
 	</div>
-	<div class="widget-body">
-	<div class="tab-pane active" id="website-traffic-tab2">
-	    <div id="wrapper2">
-       		<div id="pageData2"></div>
-	    </div>
-		<div class="clearfix" style="clear: both;"></div>
-		<div id="placeholder" style="height: 200px;"></div>
-		<div id="overview" style="height: 40px;"></div>
-	</div>
+
 	</div>
 </div>
 

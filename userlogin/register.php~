@@ -221,11 +221,10 @@ require_once("models/header.php");
 
 
 			<input type="text" name='username' class="input-block-level" placeholder="User Name">
-			<input type="text" name='displayname' class="input-block-level" placeholder="Full Name">
-			<input type="text" name='email' class="input-block-level" placeholder="Email Address">
 			<input type="password" name='password' class="input-block-level" placeholder="Password"> 
 			<input type="password" name='passwordc' class="input-block-level" placeholder="Confirm Password"> 
-			
+			<input type="text" name='displayname' class="input-block-level" placeholder="Full Name">
+			<input type="text" name='email' class="input-block-level" placeholder="Email Address">
 			<label>Security Code:</label><img src='models/captcha.php'>
 			<input type="text" name='captcha' class="input-block-level" placeholder="Enter Security Code">
 
