@@ -1,4 +1,0 @@
-stock-admin
-===========
-
-stock admin
