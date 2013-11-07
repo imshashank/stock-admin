@@ -1,50 +1,34 @@
 <?php
 
-$per_page=36;
+$per_page=18;
 
 include_once('includes/db.php');
 
 if(isset($_POST['pageLimit']) && !empty($_POST['pageLimit'])){
 
     $pageLimit=$_POST['pageLimit'];
+
 }else{
 
     $pageLimit='0';
 
 }
 
-
 if(isset($_POST['sectorSelect']) && !empty($_POST['sectorSelect'])){
 
     $sectorSelect=$_POST['sectorSelect'];
 
-}else {
+}else{
 
-    $sectorSelect='undefined';
-
-}
-
-if(isset($_POST['industrySelect']) && !empty($_POST['industrySelect'])){
-
-    $industrySelect=$_POST['industrySelect'];
-
-}else {
-
-    $industrySelect='undefined';
+    $sectorSelect='';
 
 }
 
-if ( $sectorSelect != 'undefined' ){
-$query="SELECT * from new where sector ='".$sectorSelect."' ORDER BY symbol ASC limit $pageLimit,".$per_page ;
 
-	}
-	else if ( $industrySelect != 'undefined' ){
-	$query="SELECT * from new where industry ='".$industrySelect."' ORDER BY symbol ASC limit $pageLimit,".$per_page ;
-		}
-		else
-		$query="SELECT * from new ORDER BY symbol ASC limit $pageLimit,".$per_page ;
-	
-	
+$query="SELECT * from new ORDER BY symbol ASC limit $pageLimit,".$per_page ;
+
+//$query="SELECT * from companies ORDER BY symbol ASC limit $per_page";
+
 
 $res=mysql_query($query);
 
@@ -66,7 +50,7 @@ if($count > 0){
        $post.= $row['industry'];
        $post.= '"><h2>';
        $post.= $row['symbol'];
-       $post.= '</h2><div class="cname"><span class="cmp-name">'.$row['title'].'</span></div></div>';
+       $post.= '</h2><span class="cmp-name">'.$row['title'].'</span></div>';
        $post.= "</div>";
 	$c++;
 	if ($c%6 ==0 && $count!=0) 
@@ -96,39 +80,10 @@ else $loadCount=$loadCount+6;
 ?>
 
 <script>
-$(document).ready(function()
-{
-
-var load=0;
-function last_msg_funtion() 
-{ 
-//loadData("<?php echo $loadCount; ?>");
-load=load+36;
-loadData(load).delay(1000);
-}; 
-
-$(window).scroll(function(){
-if ($(window).scrollTop() == $(document).height() - $(window).height()){
-last_msg_funtion();
-}
-	
-}); 
-});
-
-//find parent
-
 </script>
 
 
 <?php
-/*
-      $HTML.='<div class="load_more_link">';
-
-       $HTML.='<input type="button" class="button" value="Load More" id="loadmore" 
-
-       onclick=loadData("'.$loadCount.'")>';
-       $HTML.='<span class="flash"></span></div>';
-*/
 $HTML.='<span class="flash"></span></div>';
  }
 

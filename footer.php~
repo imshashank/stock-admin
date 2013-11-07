@@ -1,9 +1,8 @@
-		<!-- Sticky Footer
+		<!-- Sticky Footer -->
 		<div id="footer" class="visible-desktop">
 
 				
 	</div>
- -->
 	
 	<!-- JQueryUI v1.9.2 -->
 	<script src="theme/scripts/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>

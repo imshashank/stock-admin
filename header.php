@@ -72,15 +72,17 @@ require('includes/db.php');
 <style>
 
 .selected{
-border: 10px #2d89ef solid;
-height: 80px !important;
-width: 111px !important;
+border: 5px #2d89ef solid;
+height: 50px !important;
+padding: 0px !important;
+width: 128px !important;
 }
 
 .tile{
 display: block;
 float: left;
-height:100px;
+height: 53px;
+padding: 4px;
 width: 130px;
 background-color: #525252;
 cursor: pointer;
@@ -94,7 +96,6 @@ font-size: 11pt;
 letter-spacing: 0.02em;
 line-height: 14pt;
 font-smooth: always;
-padding: 5px;
 margin: 0 10px 10px 0;
 overflow: hidden;
 }
@@ -102,7 +103,15 @@ overflow: hidden;
 .tile h2{
 color: white;
 text-align: center;
+font-size: 27px;
+margin-bottom: -7px;
 }
+
+.cname{
+text-align: center;
+overflow: hidden
+}
+
 .cmp-name{
 font-size:10px;
 }
@@ -112,11 +121,19 @@ font-size:10px;
 
 }
 
+#searchdiv{
+border: 1px solid black;
+margin-left: 10px;
+width: 68%;
+padding: 9px 0 0 0;
+}
+
 </style>
 <script>
 $(document).ready(function() {
 
 userData();
+
 });
 
 function userData(){
@@ -138,5 +155,22 @@ function userData(){
 
 </script>
 
-</head>
+<style>
+#tags{
+background-color: #ffffff;
+border/*\**/: 1px solid #cdd4d9\9;
+border: 1px solid rgba(128,128,128,0.4);
+border-radius: 3px;
+box-shadow: 1px 1px 1px rgba(128,128,128,0.2);
+font-family: 'Montserrat', sans-serif;
+font-size: 13px;
+color: #9ca4aa;
+margin-left: 16px;
+margin-top: -1px;
+height: 14px;
+width: 250px;
+padding: 8px;
+}
+</style>
 
+</head>

@@ -24,7 +24,7 @@
 
 
 
-  $query="SELECT * FROM $tableName WHERE user_name= '$user' order by company ";
+  $query="SELECT * FROM $tableName WHERE user_name= '$user' orderby company ";
   $res=mysql_query($query);
   
   $count=mysql_num_rows($res);
