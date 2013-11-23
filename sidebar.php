@@ -14,7 +14,7 @@ Welcome, $loggedInUser->displayname </div>";
 ?>
 
 					<li class="glyphicons cogwheels"><a href="account.php?lang=en"><i></i><span>Companies</span></a></li>
-					<li class="glyphicons charts"><a href="stocks.php?lang=en"><i></i><span>Stocks</span></a></li>
+					<li class="glyphicons charts"><a href="companies.php?lang=en"><i></i><span>Stocks</span></a></li>
 					<li class="hasSubmenu">
 						<a data-toggle="collapse" class="glyphicons show_thumbnails_with_lines" href="#menu_forms"><i></i><span>Settings</span></a>
 						<ul class="collapse" id="menu_forms">

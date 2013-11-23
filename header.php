@@ -133,7 +133,7 @@ padding: 9px 0 0 0;
 $(document).ready(function() {
 
 userData();
-
+companyData();
 });
 
 function userData(){
@@ -145,6 +145,21 @@ function userData(){
         dataType: "html",   //expect html to be returned                
         success: function(response){                    
             $("#responsecontainer").html(response); 
+            //alert(response);
+        }
+
+    });
+}
+
+function companyData(){
+     var dataString1 = 'user='+'<?php echo $loggedInUser->displayname; ?>';
+      $.ajax({    //create an ajax request to load_page.php
+        type: "POST",
+        data: dataString1,
+        url: "getcompanydata.php",             
+        dataType: "html",   //expect html to be returned                
+        success: function(response){                    
+            $("#companydata").html(response); 
             //alert(response);
         }
 

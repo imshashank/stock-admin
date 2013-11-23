@@ -72,7 +72,7 @@ require('includes/db.php');
 <style>
 
 .selected{
-border: 4px #2d89ef solid;
+border: 5px #2d89ef solid;
 height: 50px !important;
 padding: 0px !important;
 width: 128px !important;
@@ -132,8 +132,8 @@ padding: 9px 0 0 0;
 <script>
 $(document).ready(function() {
 
-userData();
-
+//userData();
+companyData();
 });
 
 function userData(){
@@ -145,6 +145,21 @@ function userData(){
         dataType: "html",   //expect html to be returned                
         success: function(response){                    
             $("#responsecontainer").html(response); 
+            //alert(response);
+        }
+
+    });
+}
+
+function companyData(){
+     var dataString1 = 'user='+'<?php echo $loggedInUser->displayname; ?>';
+      $.ajax({    //create an ajax request to load_page.php
+        type: "POST",
+        data: dataString1,
+        url: "getcompanydata.php",             
+        dataType: "html",   //expect html to be returned                
+        success: function(response){                    
+            $("#companydata").html(response); 
             //alert(response);
         }
 
