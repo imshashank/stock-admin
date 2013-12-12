@@ -1,7 +1,7 @@
 <?php 
 
   //--------------------------------------------------------------------------
-  // Example php script for fetching data from mysql database
+  // This gets a company data from the database and replies to the jquery request
   //--------------------------------------------------------------------------
   $host = "localhost"; //Host address (most likely localhost)
   $databaseName = "user"; //Name of Database
@@ -23,7 +23,6 @@
 }
 
 
-$user='shashank';
   $query="SELECT * FROM $tableName WHERE user_name= '$user' order by company ";
   $res=mysql_query($query);
   $count=mysql_num_rows($res);
@@ -75,7 +74,7 @@ $post.='<table class="table table-bordered table-condensed">
 					<tr>
 						<td class="center">Finn</td>
 						<td>'.$result[1].'</td>
-					</tr>
+					</tr><!--
 					<tr>
 						<td class="center">Valence</td>
 						<td>'.$result[2].'</td>
@@ -87,7 +86,7 @@ $post.='<table class="table table-bordered table-condensed">
 					<tr>
 						<td class="center">Dominance</td>
 						<td>'.$result[4].'</td>
-					</tr>
+					</tr>-->
 				</tbody>
 			</table>';
 }
@@ -110,8 +109,6 @@ $post.= '</div><div class="row-fluid">';
 $post.='</div>';
 $HTML=$post;	
 echo $HTML;
-
-
 
 
 ?>

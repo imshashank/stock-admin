@@ -23,10 +23,8 @@
 }
 
 
-
   $query="SELECT * FROM $tableName WHERE user_name= '$user' order by company ";
   $res=mysql_query($query);
-  
   $count=mysql_num_rows($res);
   
   $HTML='';

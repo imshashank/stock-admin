@@ -4,7 +4,7 @@
  //Pull data from home.php front-end page
  $id=$_POST['ID'];
  $name=$_POST['Name'];
- $title=$_POST['Title'];
+ $company=$_POST['Title'];
 
 $hostname="localhost";
 $username="user";

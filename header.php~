@@ -132,7 +132,7 @@ padding: 9px 0 0 0;
 <script>
 $(document).ready(function() {
 
-//userData();
+userData();
 companyData();
 });
 
@@ -162,9 +162,7 @@ function companyData(){
             $("#companydata").html(response); 
             //alert(response);
         }
-
     });
-
 }
 
 

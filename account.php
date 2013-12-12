@@ -16,7 +16,8 @@ include('header.php');
 	    source:'suggest.php', minLength:2,
 	select : function(event, ui) {
 	var selectedObj = ui.item;
-	$.post('insert.php', {ID: selectedObj.value, Name: '<?php echo $loggedInUser->displayname; ?>' },
+	var Title = selectedObj.label;
+	$.post('insert.php', {ID: selectedObj.value, Name: '<?php echo $loggedInUser->displayname; ?>', Title: Title },
 	function(data){
 	$("#message").html(data);
 	$("#message").hide();
@@ -48,15 +49,18 @@ function loadData(pageLimit){
 }
   loadData('0');
 
+
+
 $('#parent > div').live('click', function (e) {
 
 $(this).toggleClass("selected");
 
 //Get values of the input fields and store it into the variables.
 var ID=$(this).attr('id');
+var Title=$(this).find('.cmp-name').text();
 var Name="<?php echo $loggedInUser->displayname; ?>";
  
-$.post('insert.php', {ID: ID, Name: Name },
+$.post('insert.php', {ID: ID, Name: Name, Title : Title },
 function(data){
 $("#message").html(data);
 $("#message").hide();

@@ -2,7 +2,7 @@
 
 $per_page=36;
 
-include_once('includes/db.php');
+require('includes/db.php');
 
 if(isset($_POST['pageLimit']) && !empty($_POST['pageLimit'])){
 
@@ -144,3 +144,4 @@ $HTML.='<span class="flash"></span></div>';
 echo $HTML;
 $HTML="";
 ?>
+

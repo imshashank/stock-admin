@@ -8,24 +8,24 @@ include('header.php');
 		<!--Start Content -->
 
 <script type="text/javascript">
+$( document ).ready(function() {
+//twitterData();
+})
 
-
-
- $(function () {
-        $("#tags").autocomplete({
-	    source:'suggest.php', minLength:2,
-	select : function(event, ui) {
-	var selectedObj = ui.item;
-	$.post('insert.php', {ID: selectedObj.value, Name: '<?php echo $loggedInUser->displayname; ?>' },
-	function(data){
-	$("#message").html(data);
-	$("#message").hide();
-	$("#message").fadeIn(1500); //Fade in the data given by the insert.php file
-	});
-	userData();
-    }
-        });
+function twitterData(){
+//     var dataString1 = 'user='+'<?php echo $loggedInUser->displayname; ?>';
+     var dataString1 = 'apple';
+      $.ajax({    //create an ajax request to load_page.php
+        type: "POST",
+        data: dataString1,
+        url: "twitterdata.php",             
+        dataType: "html",   //expect html to be returned                
+        success: function(response){                    
+            $("#twitterdata").html(response); 
+//            alert(response);
+        }
     });
+}
 
 
 </script>
@@ -52,11 +52,10 @@ include('header.php');
 <h3>Companies in your portfolio</h3>
 <div id="companydata" align="center"></div>
 
+<div id="twitterdata" align="center"></div>
 
 <div class="separator bottom"></div>
 <div class="ui-widget">
-
-
 
 			<div class="clearfix" style="clear: both;"></div>
 			<div id="overview" style="height: 40px;"></div>

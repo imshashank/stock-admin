@@ -160,11 +160,8 @@ function companyData(){
         dataType: "html",   //expect html to be returned                
         success: function(response){                    
             $("#companydata").html(response); 
-            //alert(response);
         }
-
     });
-
 }
 
 
